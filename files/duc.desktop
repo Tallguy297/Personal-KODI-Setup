@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Disk Usage Chart
+Comment=Disk Usage Chart
+Exec=/bin/bash /bin/duc.sh
+Icon=/bin/duc.png
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=DUC
+Encoding=UTF-8
+Categories=Application;
+
+Name[en_AU]=Disk Usage Chart

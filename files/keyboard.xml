@@ -1,0 +1,15 @@
+<keymap>
+  <global>
+    <keyboard>
+      <backslash>noop</backslash>
+      <minus>noop</minus>
+      <plus>noop</plus>
+      <equals>noop</equals>
+      <volume_mute>noop</volume_mute>
+      <volume_down>noop</volume_down>
+      <volume_up>noop</volume_up>
+      <numpadminus>noop</numpadminus>
+      <numpadplus>noop</numpadplus>
+    </keyboard>
+  </global>
+</keymap>
