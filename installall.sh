@@ -129,9 +129,12 @@ sed -i 's/Restart=on-abort/Restart=always/g' /lib/systemd/system/apache2.service
 
 echo -e '/mnt/sdb1 *(rw,async,no_root_squash,no_subtree_check)'>/etc/exports
 
-echo -e '/mnt/WORKGROUP /etc/auto.sambashares --timeout=30 --ghost'>>/etc/auto.master
-echo -e 'Drive_D -fstype=cifs,rw,username=guest,password=,uid=1000,iocharset=utf8 ://192.168.0.2/Drive_D'>/etc/auto.sambashares
-echo -e 'Drive_E -fstype=cifs,rw,username=guest,password=,uid=1000,iocharset=utf8 ://192.168.0.2/Drive_E'>>/etc/auto.sambashares
+if ! grep -Fxq '/mnt/WORKGROUP /etc/auto.sambashares --timeout=30 --ghost' /etc/auto.master
+then
+	echo -e '/mnt/WORKGROUP /etc/auto.sambashares --timeout=30 --ghost'>>/etc/auto.master
+	echo -e 'Drive_D -fstype=cifs,rw,username=guest,password=,uid=1000,iocharset=utf8 ://192.168.0.2/Drive_D'>/etc/auto.sambashares
+	echo -e 'Drive_E -fstype=cifs,rw,username=guest,password=,uid=1000,iocharset=utf8 ://192.168.0.2/Drive_E'>>/etc/auto.sambashares
+fi
 
 echo "MEDIAPC" > /etc/hostname
 
