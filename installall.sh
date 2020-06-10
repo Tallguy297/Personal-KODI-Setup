@@ -31,7 +31,7 @@ apt-get -y install gdebi
 apt-get -y install gedit
 apt-get -y install software-properties-common
 apt-get -y install kodi kodi-inputstream-adaptive libbluray-bdj
-apt-get -y install kodi-screensaver-{asteroids,asterwave,biogenesis,cpbobs,pingpong,pyro,stars}
+apt-get -y install kodi-screensaver-{asteroids,asterwave,biogenesis,pingpong,pyro,stars}
 apt-get -y install kodi-visualization-{spectrum,starburst,waveform}
 apt-get -y install --install-suggests kodi
 apt-get -y install libsmbclient libwbclient0 python-{dnspython,samba}
