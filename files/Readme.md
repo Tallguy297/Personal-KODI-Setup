@@ -1,3 +1,4 @@
+# smb.conf CHANGES
 Note: The smb.conf file line<br>`client max protocol = NT1`<br>has been changed to<br>
 `client min protocol = NT1`<br>
 `server min protocol = NT1`<br>
