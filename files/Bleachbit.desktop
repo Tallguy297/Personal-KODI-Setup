@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=sudo /usr/bin/bleachbit -c --preset
-X-GNOME-Autostart-enabled=true
-NoDisplay=false
-Hidden=false
-Name[en_AU]=Bleachbit
-Comment[en_AU]=Clean all temporary files
-X-GNOME-Autostart-Delay=0
