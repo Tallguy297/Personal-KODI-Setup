@@ -180,7 +180,7 @@ rm -f /tmp/tmpkey
 apt-get -y -qq update >/dev/null
 apt-get -y -qq install apt-transport-https >/dev/null
 apt-get -y -qq install webmin >/dev/null
-/usr/share/webmin/changepass.pl /etc/webmin root 'root' >/dev/null
+echo -e '\n' | /usr/share/webmin/changepass.pl /etc/webmin root '' 2>/dev/null
 sed -i 's/port=10000/port=8000/g' /etc/webmin/miniserv.conf
 sed -i 's/listen=10000/listen=8000/g' /etc/webmin/miniserv.conf
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
