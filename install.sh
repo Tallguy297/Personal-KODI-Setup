@@ -126,7 +126,7 @@ cp -f /usr/share/applications/Zoom.desktop /home/$(users)/Desktop
 
 function get-skype() {
 echo -e '\033[1;33mInstalling \033[1;34mSkype Video Commmunications\033[0m'
-apt-get -y install skypeforlinux >/dev/null
+apt-get -y -qq install skypeforlinux >/dev/null
 cp -f /usr/share/applications/skypeforlinux.desktop /home/$(users)/Desktop
 }
 
