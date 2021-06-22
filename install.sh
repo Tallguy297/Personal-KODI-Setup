@@ -126,10 +126,7 @@ cp -f /usr/share/applications/Zoom.desktop /home/$(users)/Desktop
 
 function get-skype() {
 echo -e '\033[1;33mInstalling \033[1;34mSkype Video Commmunications\033[0m'
-wget -q -O /tmp/skypeforlinux-64.deb https://repo.skype.com/latest/skypeforlinux-64.deb >/dev/null
-dpkg -i /tmp/skypeforlinux-64.deb >/dev/null
-rm -f /tmp/skypeforlinux-64.deb
-apt-get -y -qq update >/dev/null
+sudo apt-get -y install skypeforlinux >/dev/null
 cp -f /usr/share/applications/skypeforlinux.desktop /home/$(users)/Desktop
 }
 
