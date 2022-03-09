@@ -19,7 +19,7 @@ fi
 
 function bootdrivelabel() {
    echo -e '\033[1;31mSetting Boot Hard Disc Drive Label\033[0m'
-   dev=$(fdisk -l | grep '*' | sed -n 2p | awk '{print $1}')
+   dev=$(fdisk -l | grep -A1 'Boot' | sed -n 2p | awk '{print $1}')
    e2label $dev 'Linux Mint'
 }
 
