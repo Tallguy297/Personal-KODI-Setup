@@ -449,7 +449,7 @@ mountline=$uuid' /mnt/shared_media auto nosuid,nodev,nofail 0 0'
 if ! grep -Fxq $uuid' /mnt/shared_media auto nosuid,nodev,nofail 0 0' /etc/fstab
 then
 	echo $mountline>>/etc/fstab
-    mkdir -p /mnt/shared_media
+	mkdir -p /mnt/shared_media
 fi
 
 # Start Process...
