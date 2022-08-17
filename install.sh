@@ -360,7 +360,7 @@ run-in-user-session dconf write /org/nemo/desktop/volumes-visible "false"
 run-in-user-session dconf write /org/cinnamon/desktop/background/slideshow/delay 5
 run-in-user-session dconf write /org/cinnamon/desktop/background/slideshow/slideshow-enabled "true"
 run-in-user-session dconf write /org/cinnamon/desktop/background/slideshow/random-order "true"
-run-in-user-session dconf write /org/cinnamon/desktop/background/slideshow/image-source "'xml:///usr/share/cinnamon-background-properties/linuxmint-kanban.xml'"
+run-in-user-session dconf write /org/cinnamon/desktop/background/slideshow/image-source "'xml:///usr/share/cinnamon-background-properties/linuxmint-vanessa.xml'"
 #Screen Saver
 run-in-user-session dconf write /org/cinnamon/desktop/session/idle-delay "uint32 0"
 run-in-user-session dconf write /org/cinnamon/desktop/screensaver/lock-enabled "false"
