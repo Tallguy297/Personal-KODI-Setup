@@ -122,10 +122,9 @@ systemctl -q enable apache2
 function get-webmin() {
 echo -e '\ec\033[1;33mInstalling \033[1;34mWebMin\033[0m'
 pushd /root >/dev/null
-echo 'deb http://download.webmin.com/download/repository sarge contrib' >/etc/apt/sources.list.d/webmin.list
-wget -q -O /tmp/tmpkey http://www.webmin.com/jcameron-key.asc >/dev/null
-apt-key add /tmp/tmpkey
-rm -f /tmp/tmpkey
+echo 'deb [signed-by=/usr/share/keyrings/jcameron-key.gpg] https://download.webmin.com/download/repository sarge contrib' >/etc/apt/sources.list.d/webmin.list
+wget https://download.webmin.com/jcameron-key.asc
+cat jcameron-key.asc | gpg --dearmor >/usr/share/keyrings/jcameron-key.gpg
 apt-get -y -qq update >/dev/null
 apt-get -y -qq install apt-transport-https >/dev/null
 apt-get -y -qq install webmin >/dev/null
