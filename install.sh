@@ -140,7 +140,6 @@ echo -e '\033[1;33mInstalling \033[1;34mKrusader Twin File Browser\033[1;36m - T
 apt-get -y -qq install kdiff3 >/dev/null
 apt-get -y -qq install kget >/dev/null
 apt-get -y -qq install kompare >/dev/null
-apt-get -y -qq install xxdiff >/dev/null
 apt-get -y -qq install krename >/dev/null
 apt-get -y -qq install md5deep >/dev/null
 apt-get -y -qq install kmail >/dev/null
