@@ -113,10 +113,8 @@ apt-get -y -qq install php-xml >/dev/null
 apt-get -y -qq install php-zip >/dev/null
 ## Create Index Page & Override limit.
 mkdir -p /var/www/html
-cp -f files/tinyfilemanager.php /var/www/html/index.php
-cp -f files/favicon.png /var/www/html/
-chmod -R 0777 /var/www/html
-rm -f /var/www/html/index.html
+unzip -o -q navphp4.45.zip -d/var/www/html
+chmod -R -f 0777 /var/www/html
 echo -e 'php_value upload_max_filesize 4.0G'>/var/www/html/.htaccess
 echo -e 'php_value post_max_size 4.2G'>>/var/www/html/.htaccess
 echo -e 'php_value memory_limit -1'>>/var/www/html/.htaccess
