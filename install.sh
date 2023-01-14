@@ -213,7 +213,7 @@ apt-get -y -qq install duc >/dev/null
 echo -e '#!/bin/bash'>/bin/duc.sh
 echo -e 'duc index /mnt/shared_media'>>/bin/duc.sh
 echo -e 'duc gui --dark --gradient /mnt/shared_media'>>/bin/duc.sh
-echo -e 'rm /home/$(users | awk '{print $1}')/.duc.db'>>/bin/duc.sh
+echo -e "rm /home/$(users | awk '{print $1}')/.duc.db">>/bin/duc.sh
 ## Create Desktop Icon
 echo -e '[Desktop Entry]'>/home/$currentuser/Desktop/duc.desktop
 echo -e 'Name=Disk Usage Chart'>>/home/$currentuser/Desktop/duc.desktop
