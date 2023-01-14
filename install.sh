@@ -315,7 +315,7 @@ cp -f /usr/share/applications/skypeforlinux.desktop /home/$currentuser/Desktop
 
 function bootdrivelabel() {
    echo -e '\033[1;31mSetting Boot Hard Disc Drive Label\033[0m'
-   dev=$(fdisk -l | grep -A1 'Boot' | sed -n 2p | awk '{print $1}')
+   dev=$(findmnt -t ext4 -n -o source)
    e2label $dev 'Linux Mint'
 }
 
@@ -391,7 +391,7 @@ echo -e '\033[1;33mInstalling \033[1;34mOpenSSH\033[0m'
 apt-get -y -qq install openssh-server >/dev/null
 
 ## Find first non-boot drive and create an FSTAB mount entry.
-dev=$(fdisk -l | grep '^/dev/[a-z]*[0-9]' | awk '$2 != "*" { print $1}' | head -n1)
+dev=$(findmnt -t fuseblk -n -o source)
 uuid=$(blkid -s UUID $dev | cut -f2 -d':' | cut -c2-)
 mountline=$uuid' /mnt/shared_media auto nosuid,nodev,nofail 0 0'
 if ! grep -Fxq $uuid' /mnt/shared_media auto nosuid,nodev,nofail 0 0' /etc/fstab
