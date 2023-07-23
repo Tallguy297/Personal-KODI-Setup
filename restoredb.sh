@@ -9,7 +9,7 @@ cp -f -r ../kodicfg/. /home/
 echo -e '\033[1;33mKODI Media Center... \033[1;34mUpdating user permissions\033[0m'
 chmod -f -R 0777 /home/kodi/
 echo -e '\033[1;33mKODI Media Center... \033[1;34mUpdating user ownership\033[0m'
-chown -R kodi:kodi /home/kodi
+chown -R root:root /home/kodi
 
 ## Restore USERS Database...
 echo -e '\033[1;33mUser '$currentuser'... \033[1;34mRestoring database\033[0m'
